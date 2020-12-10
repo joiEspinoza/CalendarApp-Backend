@@ -110,7 +110,7 @@ const revalidToken = async ( request, response = response ) =>
 
     const newToken = await generarJWT( uid, name );
 
-    return response.json( { ok : true, msg : "Revalid Token", newToken } )
+    return response.json( { ok : true, msg : "Revalid Token", newToken, uid, name } )
 };
 
 //*******************************************************************************************//
